@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alyssa Florist, toko bunga terbaik di Cianjur, menyediakan beragam bunga segar dan rangkaian indah untuk semua acara.">
+    <meta name="keywords" content="Toko Bunga, Cianjur, Alyssa Florist, Bunga Segar, Cianjur Dua">
+    <link rel="icon" href="https://www.alyssaflorist.com/icon.png" type="image/png">
+    <title>Toko Bunga Cianjur Dan Sekitarnya - Alyssa Florist</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+            position: relative;
+            overflow: auto;
+        }
+
+        /* Animasi bunga kecil melayang */
+        .flower-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .flower {
+            position: absolute;
+            background-image: url('https://www.alyssaflorist.com/icon.png');
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        /* Efek melayang */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Mengatur posisi bunga */
+        .flower:nth-child(1) { left: 15%; top: 20%; animation-delay: 0s; }
+        .flower:nth-child(2) { left: 30%; top: 50%; animation-delay: 2s; }
+        .flower:nth-child(3) { left: 60%; top: 30%; animation-delay: 4s; }
+        .flower:nth-child(4) { left: 80%; top: 10%; animation-delay: 6s; }
+
+        /* Judul */
+        .title {
+            font-size: 1.8rem;
+            color: red;
+            text-align: center;
+            margin-top: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Gambar Bunga */
+        .image-container {
+            max-width: 320px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .flower-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Tombol CTA 3D */
+        .cta-button {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #fb8c00;
+            transform: translateY(-3px);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsif */
+        @media (min-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bunga Kecil Melayang -->
+    <div class="flower-background">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+    </div>
+
+    <!-- Judul -->
+    <h1 class="title">Toko Bunga Cianjur</h1>
+
+    <!-- Gambar -->
+    <div class="image-container">
+        <img src="1.jpg" alt="Alyssa Florist" class="flower-image">
+    </div>
+
+    <!-- Tombol CTA -->
+    <a href="https://www.alyssaflorist.com" class="cta-button">Kunjungi Toko</a>
+
+</body>
+</html>
